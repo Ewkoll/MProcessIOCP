@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="头文件\接口">
+      <UniqueIdentifier>{0dbd89f3-0801-461f-929e-3d0b867aaad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\实现">
+      <UniqueIdentifier>{46736c3d-4215-4731-9c4b-458997e86ff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\接口">
+      <UniqueIdentifier>{8124cd5d-2b10-42ec-a939-be18bdc99c76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\实现">
+      <UniqueIdentifier>{f971a0ed-451f-4321-8bb7-7578103b7ad9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\ConsoleLog.cpp">
+      <Filter>源文件\接口</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\ConsoleLogIMPL.cpp">
+      <Filter>源文件\实现</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\FileLogIMPL.cpp">
+      <Filter>源文件\实现</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\ConvertIMPL.cpp">
+      <Filter>源文件\实现</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\KernelEventIMPL.cpp">
+      <Filter>源文件\实现</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\LockIMPL.cpp">
+      <Filter>源文件\实现</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\stdafx.cpp">
+      <Filter>源文件\实现</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Log.cpp">
+      <Filter>源文件\接口</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\FileLog.cpp">
+      <Filter>源文件\接口</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Convert.cpp">
+      <Filter>源文件\接口</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\KernelEvent.cpp">
+      <Filter>源文件\接口</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Lock.cpp">
+      <Filter>源文件\接口</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Dir.cpp">
+      <Filter>源文件\实现</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\WorkPathIMPL.cpp">
+      <Filter>源文件\实现</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\WorkPath.cpp">
+      <Filter>源文件\接口</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Library.cpp">
+      <Filter>头文件\实现</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Include\ConsoleLog.h">
+      <Filter>头文件\接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\ConsoleLogIMPL.h">
+      <Filter>头文件\实现</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\FileLogIMPL.h">
+      <Filter>头文件\实现</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\ConvertIMPL.h">
+      <Filter>头文件\实现</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\KernelEventIMPL.h">
+      <Filter>头文件\实现</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\LockIMPL.h">
+      <Filter>头文件\实现</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\stdafx.h">
+      <Filter>头文件\实现</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\targetver.h">
+      <Filter>头文件\实现</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\ILog.h">
+      <Filter>头文件\接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Log.h">
+      <Filter>头文件\实现</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\FileLog.h">
+      <Filter>头文件\接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Convert.h">
+      <Filter>头文件\接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KernelEvent.h">
+      <Filter>头文件\接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Lock.h">
+      <Filter>头文件\接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Dir.h">
+      <Filter>头文件\接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\WorkPath.h">
+      <Filter>头文件\接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\WorkPathIMPL.h">
+      <Filter>头文件\实现</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Library.h">
+      <Filter>头文件\接口</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
