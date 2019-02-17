@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="头文件\IOCP">
+      <UniqueIdentifier>{66730d6c-0770-4503-a298-0941ec467c42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Common">
+      <UniqueIdentifier>{3bd1a094-e741-43c3-a45b-1997a8341d24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\LOG">
+      <UniqueIdentifier>{1a2d093d-bada-4498-a321-970cf304558d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\IOCP">
+      <UniqueIdentifier>{eddc20b7-bfa0-435d-9510-eab765cd7905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\LOG">
+      <UniqueIdentifier>{4c08bac9-b976-4c54-b166-aec281b21ee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Common">
+      <UniqueIdentifier>{1a52c7a6-c4b6-4326-b5a9-0160b00a345a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\协议">
+      <UniqueIdentifier>{1442d6f8-a5a1-498f-bf3b-d7143c4b2d17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\协议">
+      <UniqueIdentifier>{8f5f1a27-ef99-4c6f-9bcb-c81449a88445}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\组包">
+      <UniqueIdentifier>{1fb6cdbe-90b3-4f62-9a15-30b231a19149}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\组包">
+      <UniqueIdentifier>{c52d8918-c0bf-4e64-bc47-f0a7605f011c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\Accept.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\AsyncOperator.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\ClientManager.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\CommunicationWorker.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Public\Src\DebugLog.cpp">
+      <Filter>源文件\LOG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Public\Src\ErrorCodeMSG.cpp">
+      <Filter>源文件\LOG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Public\Src\InitSocket.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\IOCPBufferManager.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\IOCPBuffer.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\IOPool.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\ProtocolAnalysis.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\stdafx.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Public\Src\SystemINFO.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\TCPServer.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Public\Src\Thread.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Public\Src\Worker.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Public\Src\Communication\IOPack.cpp">
+      <Filter>源文件\组包</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\CommonProtocol.cpp">
+      <Filter>源文件\协议</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Public\Src\Communication\CommonPack.cpp">
+      <Filter>源文件\组包</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\ConnectionCheck.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\LockAccept.cpp">
+      <Filter>源文件\IOCP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Src\Accept.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\AsyncOperator.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Include\Common\BlockQueue.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\ClientManager.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\CommunicationWorker.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Include\DebugLog.h">
+      <Filter>头文件\LOG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Include\ErrorCodeMSG.h">
+      <Filter>头文件\LOG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Include\HashMap\HashMap.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Include\InitSocket.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\IOCPBuffer.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\IOCPBufferManager.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Include\IRunable.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\IOPool.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\IServer.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Include\HashMap\List.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\ProtocolAnalysis.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Include\SystemINFO.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\TCPServer.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Include\Worker.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Include\Thread.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Include\Communication\IOPack.h">
+      <Filter>头文件\组包</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\CommonProtocol.h">
+      <Filter>头文件\协议</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Public\Include\Communication\CommonPack.h">
+      <Filter>头文件\组包</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\ConnectionCheck.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\AcceptBase.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\LockAccept.h">
+      <Filter>头文件\IOCP</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
