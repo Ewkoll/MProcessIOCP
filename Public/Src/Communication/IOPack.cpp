@@ -28,7 +28,7 @@ CIOPack::CIOPack(void* pData, int nLength)
 {
 	if (NULL == pData || 0 == nLength)
 	{
-		throw PackException(std::string("入参异常！"));
+		throw PackException(std::string("param exception!"));
 		return;
 	}
 	
@@ -136,7 +136,7 @@ CIOPack& CIOPack::operator>>(unsigned char& cData)
 {
 	if (m_nPos + (int)sizeof(cData) > m_nUse)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
 	unsigned char *pData = GetBuffer() + m_nPos;
@@ -149,7 +149,7 @@ CIOPack& CIOPack::operator>>(int& nData)
 {
 	if (m_nPos + (int)sizeof(nData) > m_nUse)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
 	unsigned char *pData = GetBuffer() + m_nPos;
@@ -162,7 +162,7 @@ CIOPack& CIOPack::operator>>(unsigned int& nData)
 {
 	if (m_nPos + (int)sizeof(nData) > m_nUse)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
 	unsigned char *pData = GetBuffer() + m_nPos;
@@ -175,7 +175,7 @@ CIOPack& CIOPack::operator>>(unsigned short& nData)
 {
 	if (m_nPos + (int)sizeof(nData) > m_nUse)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
 	unsigned char *pData = GetBuffer() + m_nPos;
@@ -188,7 +188,7 @@ CIOPack& CIOPack::operator>>(float& nData)
 {
 	if (m_nPos + (int)sizeof(nData) > m_nUse)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
 	unsigned char *pData = GetBuffer() + m_nPos;
@@ -201,7 +201,7 @@ CIOPack& CIOPack::operator>>(double& nData)
 {
 	if (m_nPos + (int)sizeof(nData) > m_nUse)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
 	unsigned char *pData = GetBuffer() + m_nPos;
@@ -214,21 +214,21 @@ CIOPack& CIOPack::operator>>(char* pData)
 {
 	if (NULL == pData)
 	{
-		throw PackException(std::string("入参异常！"));
+		throw PackException(std::string("param exception!"));
 	}
 
 	unsigned int nMagicCode = 0;
 	operator>>(nMagicCode);
 	if (nMagicCode != MAGIC_STRING_CODE)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
 	int nLength = 0;
 	operator>>(nLength);
 	if (m_nPos + nLength > m_nLength)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
 	memcpy(pData, GetBuffer() + m_nPos, nLength);
@@ -240,24 +240,24 @@ CIOPack& CIOPack::operator>>(std::shared_ptr<char>& pData)
 {
 	if (NULL == pData)
 	{
-		throw PackException(std::string("入参异常！"));
+		throw PackException(std::string("param exception!"));
 	}
 
 	unsigned int nMagicCode = 0;
 	operator>>(nMagicCode);
 	if (nMagicCode != MAGIC_STRING_CODE)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
 	int nLength = 0;
 	operator>>(nLength);
 	if (m_nPos + nLength > m_nLength)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
-	pData = std::shared_ptr<char>(new char[nLength + 1], std::default_delete<char[]>());
+	pData = std::shared_ptr<char>(new char[static_cast<unsigned __int64>(nLength) + 1], std::default_delete<char[]>());
 	memcpy(pData.get(), GetBuffer() + m_nPos, nLength);
 	pData.get()[nLength] = '\x0';
 	m_nPos += nLength;
@@ -278,16 +278,16 @@ CIOPack& CIOPack::ParseData(std::shared_ptr<char>& pData, int& nSize)
 	operator>>(nMagicCode);
 	if (nMagicCode != MAGIC_MEMORY_CODE)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
 	operator>>(nSize);
 	if (m_nPos + nSize > m_nLength)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
-	pData = std::shared_ptr<char>(new char[nSize + 1], std::default_delete<char[]>());
+	pData = std::shared_ptr<char>(new char[static_cast<unsigned __int64>(nSize) + 1], std::default_delete<char[]>());
 	memcpy(pData.get(), GetBuffer() + m_nPos, nSize);
 	pData.get()[nSize] = '\x0';
 	m_nPos += nSize;
@@ -298,7 +298,7 @@ CIOPack& CIOPack::ParseArrayData(char *pData, int nSize)
 {
 	if (NULL == pData || m_nPos + nSize > m_nLength)
 	{
-		throw PackException(std::string("解包异常！"));
+		throw PackException(std::string("parse package exception!"));
 	}
 
 	memcpy(pData, GetBuffer() + m_nPos, nSize);
@@ -323,13 +323,13 @@ void CIOPack::GenerateNewBuffer(int nLength)
 {
 	if (nLength > 1024 * 1024 * 1024)
 	{
-		throw PackException(std::string("包长度异常！"));
+		throw PackException(std::string("package length exception!"));
 	}
 
 	std::shared_ptr<unsigned char> pBuffer = std::shared_ptr<unsigned char>(new unsigned char[nLength], std::default_delete<unsigned char[]>());
 	if (NULL == pBuffer)
 	{
-		throw PackException(std::string("包分配内存异常！"));
+		throw PackException(std::string("alloc memory exception!"));
 	}
 
 	memset(pBuffer.get(), 0, nLength * sizeof(char));
@@ -355,7 +355,7 @@ unsigned char* CIOPack::GetBuffer()
 	{
 		if (NULL == m_pBuffer)
 		{
-			throw PackException(std::string("异常！"));
+			throw PackException(std::string("unintended exception!"));
 		}
 		return m_pBuffer.get();
 	}

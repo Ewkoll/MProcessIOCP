@@ -30,7 +30,7 @@ public:
 
 	virtual ~CAutoClearManager()
 	{
-		for each (std::function<int()> ClearFunction in m_ListSingleton)
+		for (std::function<int()> ClearFunction : m_ListSingleton)
 		{
 			ClearFunction();
 		}

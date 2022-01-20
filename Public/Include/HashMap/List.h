@@ -111,7 +111,7 @@ namespace HashList
 		void LockNode(long nLockCount = 2048)
 		{
 			long lWaitCount = 0;
-			long nCircle = 0, nIndex = 0;
+			long nCircle = 0, nIndex = 0, nCount = 0;
 			#if defined(_WIN32) || defined(_WIN64)
 				// 如果*m_bLock == FALSE，那么*m_Lock设置为FALSE，并返回FALSE
 				// 如果*m_bLock == TRUE，那么返回TRUE
@@ -121,10 +121,13 @@ namespace HashList
 					{
 						for (nIndex = 0; nIndex < nCircle; ++nIndex)
 						{
+							nCount++;
+							/*
 							__asm
 							{
 								pause
 							}
+							*/
 						}
 				
 						if (InterlockedCompareExchange(&m_bLock, TRUE, FALSE) == FALSE)
